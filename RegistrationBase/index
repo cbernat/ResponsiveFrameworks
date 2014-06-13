@@ -1,0 +1,354 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Description" content="Crea tu cuenta gratis en Doppler sin l&#237;mite de env&#237;os. Descubre el poder del Email Marketing en menos de un minuto." />
+    <title>Registrate gratis - Doppler Email Marketing</title>
+    <link rel="icon"  type="image/x-icon"  href="/doppler_favicon.ico" />    
+    <link href="css/Register.css" type="text/css" rel="stylesheet"/>
+    <link href="css/jquery.validate.password.css" type="text/css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+   
+
+</head>
+<body>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/jquery.unobtrusive-ajax.js" type="text/javascript"></script>
+    <script src="js/jquery.validate.js" type="text/javascript"></script>
+    <script src="js/jquery.validate.unobtrusive.js" type="text/javascript"></script>
+    <script src="js/jquery.ui.js" type="text/javascript"></script>
+    <script src="js/jquery.placeholder.js" type="text/javascript"></script>
+    <script src="js/jquery.validate.password.es.js" type="text/javascript"></script>
+    <script scr="js/respond.js"></script>
+    <script scr="js/bootstrap.min.js"></script>
+<div id="header">
+    <div class="innerContainer">
+        <a id="logo"></a>
+        <div id="nav">
+            <ul id="navigationContainer visible-lg visible-md visible-sm">
+                <li><a class="green" href="/">Ingresa</a></li>
+                <li><a class="selected">&#161;Reg&#237;strate Gratis!</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<form action="/Registration/Register/CreateUser" id="Register" method="post">    <input id="origin" name="origin" type="hidden" value="" />
+    <div class="yellowContainer signUp">
+    <div class="innerContainer">
+        <input id="Language" name="Language" type="hidden" value="es" />
+       <h1>Bienvenido, <span>Reg&#237;strate Gratis.</span></h1>
+       <h2>Completa el siguiente formulario y descubre el mundo del Email Marketing.</h2>
+       <div class="inputContainer">
+            <input autocomplete="off" class="bigInput required" data-val="true" data-val-length="Longitud m&amp;#225;xima alcanzada" data-val-length-max="50" data-val-regex="&amp;#161;Hey! Necesitamos saber qui&amp;#233;n eres." data-val-regex-pattern="^([a-zA-Z0-9_+\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,6})$" data-val-remote="&amp;#161;Ouch! Ya posees una cuenta en Doppler." data-val-remote-additionalfields="*.Email" data-val-remote-url="/Registration/Register/ValidateExistingEmail" data-val-required="Hey! Completa este campo, ser&amp;#225; tu usuario." id="Email" maxlength="50" name="Email" placeholder="Email" type="text" value="" />
+            <span class="message" id="EmailMessage">Tu email ser&#225; tu nombre de usuario.</span>
+            <span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+            <br />
+            <input autocomplete="off" class="bigInput required" data-val="true" data-val-length="Longitud m&amp;#225;xima alcanzada" data-val-length-max="50" data-val-regex="&amp;#161;Ouch! El dato ingresado no es v&amp;#225;lido." data-val-regex-pattern="[^-+*/,;:_¿?^\[\]¡!@#$€%()=\\ºª{}|&lt;>0-9]*" data-val-required="&amp;#161;Hey! Necesitamos saber qui&amp;#233;n eres." id="Name" maxlength="50" name="Name" placeholder="Nombre" type="text" value="" />
+            <span class="field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+            <br />
+            <input autocomplete="off" class="bigInput required" data-val="true" data-val-length="Longitud m&amp;#225;xima alcanzada" data-val-length-max="50" data-val-regex="&amp;#161;Ouch! El dato ingresado no es v&amp;#225;lido." data-val-regex-pattern="[^-+*/,;:_¿?^\[\]¡!@#$€%()=\\ºª{}|&lt;>0-9]*" data-val-required="&amp;#161;Hey! Necesitamos saber qui&amp;#233;n eres." id="LastName" maxlength="50" name="LastName" placeholder="Apellido" type="text" value="" />
+            <span class="field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
+            <br />
+            <input autocomplete="off" class="bigInput required phone-input" data-val="true" data-val-length="Longitud m&amp;#225;xima alcanzada" data-val-length-max="6" data-val-regex="&amp;#161;Ouch! El dato ingresado no es v&amp;#225;lido." data-val-regex-pattern="[0-9-]*" data-val-required="&amp;#161;Ouch! Este es un campo requerido." id="PhoneCountry" maxlength="6" name="PhoneCountry" placeholder="País" type="text" value="54" />
+            <input autocomplete="off" class="bigInput required phone-input" data-val="true" data-val-length="Longitud m&amp;#225;xima alcanzada" data-val-length-max="5" data-val-regex="&amp;#161;Ouch! El dato ingresado no es v&amp;#225;lido." data-val-regex-pattern="[0-9-]*" data-val-required="&amp;#161;Ouch! Este es un campo requerido." id="PhoneArea" maxlength="5" name="PhoneArea" placeholder="Área" type="text" value="" />
+            <input autocomplete="off" class="bigInput required phone-input" data-val="true" data-val-length="&amp;#161;Ouch! El dato ingresado no es v&amp;#225;lido." data-val-length-max="12" data-val-length-min="6" data-val-notequalnumbers="&amp;#161;Ouch! El dato ingresado no es v&amp;#225;lido." data-val-notinordernumbers="&amp;#161;Ouch! El dato ingresado no es v&amp;#225;lido." data-val-regex="&amp;#161;Ouch! El dato ingresado no es v&amp;#225;lido." data-val-regex-pattern="[0-9-]*" data-val-required="&amp;#161;Ouch! Este es un campo requerido." id="Phone" maxlength="12" name="Phone" placeholder="Teléfono" type="text" value="" />
+            <span id="PhoneMessage">Estemos en Contacto.</span>
+            <span class="field-validation-valid phone-validation" data-valmsg-for="Phone" data-valmsg-replace="true"></span>
+            <span class="field-validation-valid phone-validation" data-valmsg-for="PhoneArea" data-valmsg-replace="true"></span>
+            <span class="field-validation-valid phone-validation" data-valmsg-for="PhoneCountry" data-valmsg-replace="true"></span>
+            <br />
+            <div id="passwordContainer">
+                <input autocomplete="off" class="password bigInput required" data-val="true" data-val-length="Longitud m&amp;#225;xima alcanzada" data-val-length-max="60" data-val-required="&amp;#161;Ouch! Debes ingresar una contrase&amp;#241;a." id="password" maxlength="60" name="NewPassword" placeholder="Contraseña" type="password" />           
+                <div id="ShowHidePass-Container">
+                <a id="showPass-check" class="blueCheck unchecked"></a>
+                <span class="showPassText">Mostrar</span>
+                </div>
+            </div>
+             <span class="password-meter">
+                    <span id="passwordMeterMessage" class="password-meter-message"></span>
+             </span>
+            <span class="message" id="NewPasswordMessage">Elige una contrase&#241;a realmente buena.</span>
+            <span class="field-validation-valid" data-valmsg-for="NewPassword" data-valmsg-replace="true"></span>            
+            <input data-val="true" data-val-required="The showCaptcha field is required." id="showCaptcha" name="showCaptcha" type="hidden" value="False" />
+            <input data-val="true" data-val-number="The field IdCountry must be a number." data-val-required="The IdCountry field is required." id="IdCountry" name="IdCountry" type="hidden" value="10" />
+        </div>
+        <div class="checkboxContainer">
+            <a id="terms-check" class="blueCheck checked"></a>
+            <input data-val="true" data-val-checkboxtrue="&amp;#161;Ouch! Este es un campo requerido." data-val-required="The TermsAndConditionsActive field is required." id="TermsAndConditionsActive" name="TermsAndConditionsActive" type="hidden" value="True" />
+            <input data-val="true" data-val-number="The field ClientTimeZoneOffset must be a number." id="ClientTimeZoneOffset" name="ClientTimeZoneOffset" type="hidden" value="" />
+            <input data-val="true" data-val-number="The field FingerPrint must be a number." data-val-required="The FingerPrint field is required." id="FingerPrint" name="FingerPrint" type="hidden" value="0" />
+            <span class="checkText"> 
+                Al hacer click en Crear Cuenta, acepto <a href="http://www.fromdoppler.com/es/condiciones.html" target="_blank">Condiciones de Uso, </a>
+                <a href="http://www.fromdoppler.com/es/deliverability.html" target="_blank">Pol&#237;ticas de Privacidad</a>
+                y 
+                <a href="http://www.fromdoppler.com/es/antispam.html" target="_blank"> Anti Spam.</a>
+               
+           </span>
+           
+        </div>
+        <span class="field-validation-valid validationTermsAndConditions" data-valmsg-for="TermsAndConditionsActive" data-valmsg-replace="true"></span>
+    </div>
+    
+</div>
+<div class="innerContainer">
+    <div class="submitContainer">
+        
+        <div class="buttonContainer">
+            <input type="button" id="submitButton" class="button greenButton" name="button" value="Crear cuenta" />
+        </div>
+    </div>
+</div>                  
+</form><script type="text/javascript">
+        var formatErrorMessage = "¡Ouch! El dato ingresado no es válido.";
+        var phoneMessage = $('<span id="PhoneMessage">Estemos en Contacto.</span>');
+
+        jQuery.validator.unobtrusive.adapters.add("checkboxtrue", function (options) {
+            options.rules["required"] = true;
+            if (options.message) {
+                options.messages["required"] = "¡Hey! Debes  aceptar las condiciones si quieres <br/> continuar usando Doppler.";
+            }
+        });
+
+        /*
+        * Finds the password field. If empty then empty the password strength related message.
+        */
+        function deletePasswordMeterIfEmpty() {
+            if ($.trim($("#password").val()) == "") {
+                $("#passwordMeterMessage").text("");
+                $(".MessageComment").remove();
+            }
+        }
+        function ErrorOnTelephone() {
+            var errorOnPhoneNumber = false;
+            var qtyErrorsVisibleOnTelephone = $(".field-validation-error.phone-validation").length;
+            var errorPhoneTooltip = $(".field-validation-error.phone-validation[data-valmsg-for=Phone]");
+            var errorAreaPhoneTooltip = $(".field-validation-error.phone-validation[data-valmsg-for=PhoneArea]");
+            var errorCountryPhoneTooltip = $(".field-validation-error.phone-validation[data-valmsg-for=PhoneCountry]");
+
+            errorPhoneTooltip.show();
+            errorAreaPhoneTooltip.show();
+            errorCountryPhoneTooltip.show();
+
+            if (qtyErrorsVisibleOnTelephone == 3) {
+                errorAreaPhoneTooltip.hide();
+                errorCountryPhoneTooltip.hide();
+                if ($("#PhoneMessage").length > 0)
+                     $("#PhoneMessage").remove();
+            } else if (qtyErrorsVisibleOnTelephone == 2) {
+                $("#PhoneMessage").remove();
+                if (errorCountryPhoneTooltip.length == 0) {
+                    errorAreaPhoneTooltip.hide();
+                } else {
+                    if (errorAreaPhoneTooltip.length != 0) {
+                        errorAreaPhoneTooltip.hide();
+                    } else {
+                        errorCountryPhoneTooltip.hide();
+                    }
+                }
+            }
+            if (qtyErrorsVisibleOnTelephone == 1 && $("#PhoneMessage").length > 0)
+                $("#PhoneMessage").remove();
+            else if (qtyErrorsVisibleOnTelephone == 0 && $("#PhoneMessage").length <= 0) {
+
+                //$("#Phone").next().append($(phoneMessage));
+                //$("#PhoneMessage").show();
+            }
+
+        }
+        function addTelephoneValidations(formatErrorMessage) {
+
+            // we add a custom jquery validation method
+            //<params>
+            // Value: is the element to be validated
+            // params: is the array of name/value pairs of the parameters extracted from the HTML
+            // element: is the HTML element that the validator is attached to
+            jQuery.validator.addMethod('NotEqualNumberPhone', function (value, element, param) {
+                if (value != "") {
+                    return !/0{6,}|1{6,}|2{6,}|3{6,}|4{6,}|5{6,}|6{6,}|7{6,}|8{6,}|9{6,}$/i.test(value);
+                } else
+                    return true;
+            }, '');
+            // and the unobtrusive adapter. The 'requiredif' name is defined in the RequiredIfAttribute from backend model
+            jQuery.validator.unobtrusive.adapters.add('notequalnumbers', function (options) {
+                options.rules['NotEqualNumberPhone'] = true;
+                options.messages['NotEqualNumberPhone'] = formatErrorMessage;
+            });
+
+            jQuery.validator.addMethod('NotInOrderNumberPhone', function (value, element, param) {
+                if (value != "") {
+                    return (!(/(012345)+|(123456)+|(234567)+|(345678)+|(456789)+$/i.test(value)) && !(/(543210)+|(654321)+|(765432)+|(876543)+|(987654)+$/i.test(value)));
+                } else
+                    return true;
+            }, '');
+            jQuery.validator.unobtrusive.adapters.add('notinordernumbers', function (options) {
+                options.rules['NotInOrderNumberPhone'] = true;
+                options.messages['NotInOrderNumberPhone'] = formatErrorMessage;
+            });
+
+
+            $(".phone-input").bind("input", function () {
+                $("#Register").validate().element("#" + this.id);
+                ErrorOnTelephone();
+            });
+
+        }
+
+
+
+        $().ready(function () {
+            if (navigator.userAgent.toLowerCase().indexOf('chrome') >= 0) {
+                setTimeout(function () {
+                    document.getElementById('Phone').value = "";
+                    addTelephoneValidations(formatErrorMessage);
+                }, 100);
+            } else {
+                addTelephoneValidations(formatErrorMessage);
+            }
+
+            $("#ClientTimeZoneOffset").val(-(new Date()).getTimezoneOffset());
+            try {
+                var fp = new Fingerprint({});
+                var fingerNumber = fp.get() % 2147483647;
+                if (fingerNumber == 0) {
+                    fingerNumber = Math.floor(Math.random() * (2147483647 + 2147483648 + 1)) - 2147483648;
+                }
+                $("#FingerPrint").val(fingerNumber);
+            }
+            catch (err) {
+                $("#FingerPrint").val(Math.floor(Math.random() * (2147483647 + 2147483648 + 1)) - 2147483648);
+            };
+
+
+            //On blur of password field fire to cleanup PWD message if necessary.
+            $("#password").keyup(function () {
+                deletePasswordMeterIfEmpty();
+            });
+            if (!$("span[data-valmsg-for='Email']").hasClass("field-validation-valid")) {
+                $("#EmailMessage").hide();
+                $("span[data-valmsg-for='Email']").addClass("errorMsg");
+            }
+            $('input[placeholder]').placeholder();
+
+
+            function text_diff(first, second) {
+                var start = 0;
+                while (start < first.length && first[start] == second[start]) {
+                    ++start;
+                }
+                var end = 0;
+                while (first.length - end > start && first[first.length - end - 1] == second[second.length - end - 1]) {
+                    ++end;
+                }
+                end = second.length - end;
+                return second.substr(start, end - start);
+            }
+
+            $("#Email").change(function (e) {
+                var inputUserName = $("#Email");
+                var text = inputUserName.val();
+                inputUserName.val($.trim(text));
+            });
+
+
+            $("#submitButton").click(function () {
+
+                if ($("#Register").valid()) {
+                    $(this).unbind("click");
+                    $("#Register").submit();
+                }
+                ErrorOnTelephone();
+                var qtyErrorsVisibleOnTelephone = $(".field-validation-error.phone-validation").length;
+                if (qtyErrorsVisibleOnTelephone == 0 && $("#PhoneMessage").length <= 0) {
+                    $("#Phone").next().append($(phoneMessage));
+                    $("#PhoneMessage").show();
+                }
+            });
+
+            $(".phone-input").blur(function () {
+                var qtyErrorsVisibleOnTelephone = $(".field-validation-error.phone-validation").length;
+                if (qtyErrorsVisibleOnTelephone == 0 && $("#PhoneMessage").length <= 0) {
+                    $("#Phone").next().append($(phoneMessage));
+                    $("#PhoneMessage").show();
+                }
+            });
+
+            $('#Register').each(function () {
+                var settngs = $.data(this, 'validator').settings;
+                var oldErrorFunction = settngs.errorPlacement;
+                settngs.errorPlacement = function (error, inputElement) {
+                    var fieldname = inputElement[0].name;
+                    var messageId = "#" + fieldname + "Message";
+                    $(messageId).hide();
+                    oldErrorFunction(error, inputElement);
+                    if (error.text() == "") {
+                        if ($("#passwordMeterMessage").text() == "")
+                            $(messageId).show();
+                        if (fieldname == "ConfirmationPassword" && $("#ConfirmationPassword").val() == $("#password").val())
+                            $(".passwordConfirmationValid").show();
+                    }
+                    else {
+                        if (fieldname == "ConfirmationPassword" && $("#ConfirmationPassword").val() != $("#password").val())
+                            $(".passwordConfirmationValid").hide();
+                        if ($("#passwordMeterMessage").text() != "")
+                            $("span[data-valmsg-for='NewPassword']").hide();
+                        else {
+                            $("span[data-valmsg-for='NewPassword']").show();
+                            $(".password-meter-message").hide();
+                        }
+                    }
+                }
+            });
+
+
+        });
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-532159-1']);
+    _gaq.push(['_setDomainName', '.fromdoppler.com']);
+    _gaq.push(['_trackPageview']);
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+    $("#Email").keydown(function (e) {
+        if (e.keyCode == 32)
+            e.preventDefault();
+    });
+    $("#terms-check").click(function (event) {
+        if ($(this).hasClass("checked")) {
+            $(this).addClass("unchecked");
+            $(this).removeClass("checked");
+            $("#TermsAndConditionsActive").val("");
+        }
+        else {
+            $(this).addClass("checked");
+            $(this).removeClass("unchecked");
+            $("#TermsAndConditionsActive").val("True");
+        }
+    });
+
+
+    $("#showPass-check").click(function (event) {
+        if ($(this).hasClass("checked")) {
+            $(this).addClass("unchecked");
+            $(this).removeClass("checked");
+        }
+        else {
+            $(this).addClass("checked");
+            $(this).removeClass("unchecked");
+        }
+        var change = $(this).hasClass("checked") ? "text" : "password";
+        var rep = $("#password").clone().attr("type", change);
+        $("#password").remove();
+        $("#passwordContainer").prepend($(rep));
+
+    });
+
+</script> 
+
+</body>
+</html>

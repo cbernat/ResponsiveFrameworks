@@ -1,0 +1,927 @@
+﻿/* File Created: February 18, 2014 */
+@font-face {
+    font-family: 'Ubuntu';
+	src: url('../fonts/font_ubuntu/ubuntu-regular.eot');
+    src: url('../fonts/font_ubuntu/ubuntu-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/font_ubuntu/ubuntu-regular.woff') format('woff'),
+         url('../fonts/font_ubuntu/ubuntu-regular.ttf') format('truetype'),
+         url('../fonts/font_ubuntu/ubuntu-regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'UbuntuLight';
+	src: url('../fonts/font_ubuntu/ubuntu-light.eot');
+    src: url('../fonts/font_ubuntu/ubuntu-light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/font_ubuntu/ubuntu-light.woff') format('woff'),
+         url('../fonts/font_ubuntu/ubuntu-light.ttf') format('truetype'),
+         url('../fonts/font_ubuntu/ubuntu-light.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'UbuntuBold';
+	src: url('../fonts/font_ubuntu_bold/ubuntu-bold.eot');
+    src: url('../fonts/font_ubuntu_bold/ubuntu-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/font_ubuntu_bold/ubuntu-bold.woff') format('woff'),
+         url('../fonts/font_ubuntu_bold/ubuntu-bold.ttf') format('truetype'),
+         url('../fonts/font_ubuntu_bold/ubuntu-bold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'UbuntuLightItalic';
+	src: url('../fonts/font_ubuntu_italic/ubuntu-lightitalic.eot');
+    src: url('../fonts/font_ubuntu_italic/ubuntu-lightitalic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/font_ubuntu_italic/ubuntu-lightitalic.woff') format('woff'),
+         url('../fonts/font_ubuntu_italic/ubuntu-lightitalic.ttf') format('truetype'),
+         url('../fonts/font_ubuntu_italic/ubuntu-lightitalic.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'UbuntuItalic';
+	src: url('../fonts/font_ubuntu_italic/ubuntu-italic.eot');
+    src: url('../fonts/font_ubuntu_italic/ubuntu-italic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/font_ubuntu_italic/ubuntu-italic.woff') format('woff'),
+         url('../fonts/font_ubuntu_italic/ubuntu-italic.ttf') format('truetype'),
+         url('../fonts/font_ubuntu_italic/ubuntu-italic.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, textarea, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, input,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	color:#92917F;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: 'Ubuntu',sans-serif;
+	font-weight: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+			
+}
+a
+{
+    color:#19A358;
+    cursor:pointer;
+    text-decoration:none;
+}
+input[type=text]::-ms-clear { display: none; }
+input[type=password]::-ms-reveal {display: none;}
+input { outline-style: none }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input, textarea{
+	font-weight:normal;
+	outline:none;
+}
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+/*GENERAL STYLES*/
+
+html, body{	
+	height:100%;
+}
+
+#header{
+	background-color:#FFF;
+	margin: auto;
+	height:75px;
+	padding-top:25px;
+	width:100%;
+}
+	#header #logo{
+		background: url(../img/dopplerlogo.png) no-repeat;
+		display:inline-block;
+		float:left;
+		height:48px;
+		width:136px;
+	}
+	#header .languageSelector
+	{
+		color:#ACAC9D;
+		height:32px;
+		font-size:12px;
+		margin:0pt auto;
+		padding-top:30px;
+		text-align:right;
+		width:960px;
+	}
+	#header #nav{
+		margin:auto;
+		float: right;
+		height:60px;
+		text-align:right;
+		width:700px;
+	}	
+	#header #nav li{
+		float:right;
+	}
+		
+		#header #nav a {
+			-moz-user-select: none;  
+    		-webkit-user-select: none;  
+    		-ms-user-select: none;
+			color:#ACAC9E;	
+			cursor:pointer;
+			display:inline-block;
+			float:left;		
+			font-size:17px;
+			height:60px;
+			line-height:60px;
+			padding:0px 11px 0px 11px;
+			text-decoration:none;
+			outline:none;
+		}
+		#header #nav a.green
+        {				
+	        color:#00B966;
+        }
+		#header #nav li:first-child a
+		{
+			padding-right:0px;
+		}
+			#header #nav a.selected{
+				
+				color:#2B2300;
+			}
+						
+			#header #nav a:hover, #header #nav a.green:hover{
+				
+				color:#2B2300;
+			}
+h1 
+{
+    color: #2B2300;
+    font-family: 'UbuntuBold', sans-serif;
+    font-size: 36px;
+    letter-spacing:-2px;
+    padding-top: 25px;	
+    padding-bottom:25px;
+}
+.innerContainer
+{
+	margin:0pt auto;
+	width:960px;
+	z-index:10;
+}
+.innerContainer h1 span
+{
+    color: #2B2100;
+    font-family: 'UbuntuLight', sans-serif;
+}
+#footer
+{
+    background: url(../img/back-login-footer.png) top center no-repeat;
+	height:580px;
+	margin: auto;
+	margin-top:30px;
+	width:100%;
+}
+.yellowContainer {
+    background: url(../img/back-login-yellow.png) repeat;
+    margin-bottom:20px;
+    width: 100%;
+    z-index:1;
+}
+.button
+{
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	cursor:pointer;
+	display:inline-block;
+	font-size:18px;
+	height:50px;
+	line-height:50px;
+	position:relative;
+	text-align:center;
+	text-transform:uppercase;
+	width:220px;
+}
+.greenButton
+{
+	background-color:#00BA66;
+	color:#FFF;
+}
+.greenButton:hover
+{
+	background-color:#02B061;
+}
+.bigInput
+{
+	-moz-border-radius: 40px;
+	-moz-box-sizing: border-box;
+	-webkit-border-radius: 40px;
+    -webkit-box-sizing: border-box;
+	background-color:#FFF;
+	border-radius: 40px;
+	box-sizing: border-box;
+	color:#2B2300;
+	font-size:15px;
+	height:40px;
+	position:relative;
+	width:470px;	
+	/*z-index:30;*/
+}
+
+input::-webkit-input-placeholder, input.placeholder {
+    color:#ACAC9A !important;
+    font-family:'UbuntuLight', Sans-Serif !important;
+}
+input:-moz-placeholder {
+    color:#ACAC9A;
+    font-family:'UbuntuLight', Sans-Serif;
+}
+#UserName
+{
+    background-image:url(../img/LogIn-sprite.png);
+    background-position: 22px 18px;
+    background-repeat: no-repeat;
+    margin-bottom:5px;
+}
+#UserPass
+{
+    background-image:url(../img/LogIn-sprite.png);
+    background-position: 19px -89px;
+    background-repeat: no-repeat;
+    margin-bottom:20px;
+}
+.field-validation-error span, #forgotPasswordContainer span.error, #securityQuestion span.field-validation-error, .errorMessage span,.passwordConfirmationValid,.errorMsg
+{
+    color:#E97017;
+    display:inline-block;
+    font-family:'UbuntuLightItalic', Sans-Serif;
+    padding-left:10px;
+    vertical-align:middle;
+    width:375px;
+}
+.validationTermsAndConditions span
+{
+    margin-top: 5px;
+    width:auto;
+}
+.passwordConfirmationValid
+{
+    color:#6A654B;
+    display:none;
+}
+.input-validation-error
+{
+    background:#FFF url(../img/register-sprite.png) 0 0 no-repeat; 
+    height:40px;
+}
+#PhoneCountry.input-validation-error, #PhoneArea.input-validation-error {
+	background:#FFF url(../img/register-sprite.png) 0 -50px no-repeat; 
+    height:40px;
+}
+#Phone.input-validation-error {
+	background:#FFF url(../img/register-sprite.png) -157px -50px no-repeat; 
+    height:40px;
+}
+
+a.green
+{				
+	color:#00B966;
+}
+a.green:hover
+{
+	color:#2B2300;
+	cursor:pointer;
+}
+span.message
+{
+    color: #6A654B;
+    display: inline-block;
+    font-family: 'UbuntuLightItalic', Sans-Serif;
+    padding-left: 10px;
+    vertical-align:middle;
+    width: 465px;
+}
+#forgotPasswordMessage
+{
+    padding-left: 6px !important;    
+}
+#NewPasswordMessage
+{
+    width:350px !important;
+}
+.errorMessageContainer
+{
+    background:url(../img/back-login-error.png) 0 0 repeat-x;
+    display:none;
+    font-size:25px;
+    height:62px;
+    padding-top:38px;
+    width:100%;
+}
+.errorHeaderRegistration 
+{
+    display: block;
+}
+.errorMessageContainer span, .errorMessageContainer a, .PasswordResetedContainer span, .PasswordResetedContainer a
+{
+    color:#FFF;
+    text-decoration:none;
+}
+.errorMessageContainer #errorMessage, .errorMessageContainer #errorMessage a, .PasswordResetedContainer #PassResetedMessage
+{
+    vertical-align:top;
+}
+.errorMessageContainer span.icon
+{
+    background:url(../img/LogIn-sprite.png) -1px -163px no-repeat;
+    display:inline-block;
+    margin-right:12px;
+    height:27px;
+    width:27px;  
+}
+
+.PasswordResetedContainer
+{
+    background:url(../img/back-login-ok.png) 0 0 repeat-x;
+    display:none;
+    font-size:25px;
+    height:62px;
+    padding-top:38px;
+    width:100%;
+}
+
+
+.PasswordResetedContainer span.icon
+{
+    background:url(../img/LogIn-sprite.png) -1px -272px no-repeat;
+    display:inline-block;
+    margin-right:12px;
+    height:27px;
+    width:27px;  
+}
+
+.forgotPassword
+{
+    font-size:15px;
+    padding-right:15px;
+    text-decoration:none;
+    width:162px;
+}
+#recaptcha_image
+{
+    float: left;
+    padding-left: 25px;
+    width: 380px !important;
+}
+#recaptcha_response_field
+{
+    -webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	background-color:#E8E8E8;
+	border-radius: 50px;    
+    color:#ACAC9A;
+    font-size:15px;
+    left: -10px;
+    height:50px;
+    padding:0 15px;
+    position:relative;
+    width:440px;
+}
+.recaptcha_reload a, .recaptcha_only_if_image a, .recaptcha_only_if_audio a, .recaptcha_help a
+{
+    background:url(../img/LogIn-sprite.png) -3px -376px no-repeat;
+    display:inline-block;
+    height:17px;
+    width:25px;
+}
+.recaptcha_only_if_image a, .recaptcha_only_if_audio a
+{
+    background-position:-3px -394px;
+    height:14px;
+}
+.recaptcha_help a
+{
+    background-position:-3px -409px;
+    padding-bottom:30px;
+}
+#forgotPasswordContainer
+{
+    display:none;
+}
+#emailRequest, #userNameRequest
+{
+    border-color:#FFF8CB;
+    font-size:15px;
+    padding: 21px 125px 21px 28px;
+    /*width: 310px;*/
+}
+#emailRequest::-webkit-input-placeholder, #emailRequest.placeholder, #userNameRequest::-webkit-input-placeholder, #userNameRequest.placeholder  {
+    color:#00BA66 !important;
+    font-family:'UbuntuLightItalic', Sans-Serif !important;
+}
+#emailRequest:-moz-placeholder, #userNameRequest:-moz-placeholder {
+    color:#00BA66;
+    font-family:'UbuntuLightItalic', Sans-Serif;
+}
+#sendRequest, #sendForgotPassRequest
+{
+    -webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+    background-color:#E5F8F0;
+    border:solid 4px #FFF;
+    border-radius: 50px;    
+    color:#00BA68;
+    cursor:pointer;
+    display:inline-block;
+    font-size:18px;
+    height:36px;
+    left: -130px;
+    margin-right:-122px;
+    padding-top:14px;
+    position: relative;
+    text-align:center;
+    top: -1px;
+    vertical-align:middle;
+    width:115px;
+}
+#sendRequest.sent, #sendForgotPassRequest.sent
+{
+    background-color:#F4F4F2;
+    color:#2B2100;
+    cursor:default;
+}
+
+/*******Sign Up***********/
+.signUp h1, .resetPass h1
+{
+    padding-bottom:20px;
+}
+h2
+{
+    color:#6A654B;
+    font-family:'UbuntuLight', Sans-Serif;
+    font-size:18px;
+    line-height:130%;
+}
+.inputContainer
+{
+    padding-top:20px;
+}
+.signUp .bigInput, .resetPass .bigInput
+{
+    margin-bottom:10px;
+    padding:0 15px;
+    width:380px;
+}
+
+.signUp #password.input-validation-error, .resetPass #password.input-validation-error
+{
+    background: #FFF !important;
+}
+.password-meter-message
+{
+   color: #6A654A; 
+   font-size:16px;
+   display:inline-block;
+   font-weight:normal;
+   text-transform:uppercase;
+}
+.field-validation-error span[htmlfor="password"]
+{
+    width:300px;
+}
+.password-meter-message-too-short, .password-meter-message-weak,.password-meter-message-good,.password-meter-message-strong
+{
+    background:url(../img/LogIn-sprite.png) 0px -798px no-repeat;
+    left: -145px;
+    margin-right: -150px;
+    padding: 3px 0 3px 150px;
+    position: relative;
+    z-index: 10px;
+    top: -2px;
+    height:20px;
+}
+
+.password-meter-message-strong,.password-meter-message-good
+{
+    background-position:0px -635px;
+}
+.captchaContainer
+{
+    height: 180px;
+    width:100%;
+}
+.submitContainer
+{
+    display:inline-block;
+}
+.submitContainer .checkboxContainer
+{
+    float:left;
+    height:55px;
+    padding-top:15px;
+    width:650px;
+}
+.submitContainer .checkboxContainer span.checkText
+{
+    font-family:'UbuntuLight', Sans-Serif;
+    font-size:15px;
+    color:#807B65;
+}
+.submitContainer .checkboxContainer #TermsAndConditionsActive
+{
+    margin-top:10px;
+}
+.submitContainer .buttonContainer
+{
+    display: inline-block;
+    float: right;
+    margin-bottom: 10px;
+}
+
+.placeholder
+{
+    position:relative;
+    display:inline-block;
+}
+
+.placeholderemailRequest-label
+{
+    color: #00BA66 !important; 
+    font-family: 'UbuntuLightItalic',Sans-Serif;
+    font-size:15px !important;
+    left:28px !important;
+}
+/*******Reset Pass***********/
+span.securityQuestion
+{
+    color:#2B2000;
+    display:block;
+    font-family:'UbuntuItalic', Sans-Serif;
+    font-size:25px;
+    letter-spacing:-1px;
+    padding:20px 0 32px 20px;
+}
+
+.placeholderpassword-label, .placeholderConfirmationPassword-label, .placeholderSecurityAnswer-label, .placeholderEmail-label,.placeholderLastName-label,.placeholderName-label,.placeholderPhone-label,.placeholderPhoneCountry-label,.placeholderPhoneArea-label
+{
+    left:10px;
+}
+.placeholderLastName-label,.placeholderName-label, .placeholderUserPass-label, .placeholderemailRequest-label,.placeholderPhone-label,.placeholderPhoneCountry-label,.placeholderPhoneArea-label, .placeholderEmail-label, .placeholderpassword-label, .placeholderConfirmationPassword-label
+{
+    color: #ACAC9A;
+    display: inline-block;
+    font-family:'UbuntuLight', Sans-Serif;
+    font-size: 15px;    
+    position: absolute;    
+    top: 12px;    
+    z-index: 999;
+}
+.placeholderUserName-label, .placeholderUserPass-label {
+	left:0px !important;
+}
+
+.placeholderemailRequest-label
+{
+    font-style:italic;
+    top: 25px;
+}
+
+.placeholderUserName-label:hover, .placeholderUserPass-label:hover
+{
+    cursor:text;
+}
+/******REGISTRATION SUCCESS MESSAGE ****/
+.RegistraccionSuccess-Container
+{
+    height:370px;
+}
+.RegistraccionSuccess-Container .innerContainer
+{
+    padding-top:45px;
+    padding-bottom: 45px;
+    position:relative;
+    z-index: 99999; 
+}
+.RegistrationOk-image
+{
+    background:url('../img/RegisterOK.png');
+    height:328px;
+    left: 590px;
+    position: absolute;
+    width: 360px;
+    z-index:10;
+}
+.leftContainer
+{
+    float:left;
+    position:absolute;
+    width: 650px;
+    z-index: 99999;
+}
+.leftContainer h1
+{
+    letter-spacing: -3px !important;
+    padding-top: 15px;
+    padding-bottom: 12px;
+}
+.leftContainer .Subtitle
+{
+    color:#2B2000;
+    font-family: 'UbuntuLight',Sans-Serif;
+    font-size: 38px;
+    font-weight:bold; 
+    letter-spacing:-2px;
+    line-height: 140%;
+    text-rendering: optimizelegibility;
+}
+.leftContainer p
+{
+    color:#2B2000;
+    font-family: 'UbuntuLight',Sans-Serif;
+    font-size: 22px;
+    line-height: 130%;
+    opacity: 0.7;
+    width: 560px;
+}
+.emailProblem
+{
+    color: #6A654B;
+    font-family: "UbuntuLight";
+    font-size: 15px;
+    line-height: 130%;
+}
+.brownButton
+{
+    background-color:#6A654B;
+    color: #FFFFFF;
+    font-family: "Ubuntu";
+    font-size:18px;
+    height: 51px !important;
+    line-height: 51px;
+    margin-left: 10px;
+    width: 160px !important;
+    text-transform:none;
+    text-decoration: none;
+}
+.sendEmail
+{
+    margin-top:35px;
+    
+}
+.RegisterContact
+{
+    color: #2B2000;
+    font-family: "Ubuntu";
+    font-size: 15px;
+    letter-spacing: -1px;
+}
+.contactLink
+{
+    color: #00A452;
+    cursor: pointer; 
+    font-family: "Ubuntu";
+    font-size: 15px;
+    letter-spacing: -1px;
+    text-decoration:none;
+}
+.RightsReserved
+{
+    color:#92917F;
+    float:right;
+    font-family:Arial;
+    font-size: 12px;
+}
+span.successSent
+{
+    color:#00B966;
+}
+.brownButton
+{
+    behavior: url(../Content/PIE.htc);
+}
+.MessageComment{
+	display:inline !important;
+	padding-bottom: 5px;
+	vertical-align: text-top !important;
+	position: relative;
+	top: -3px;
+	line-height: 20px;
+}
+
+.company-cm
+{
+    color:#2B2200; 
+    font-size:30px;
+    font-weight:bold; 
+    letter-spacing:-2px;
+    line-height:38px; 
+    font-family:Arial, Helvetica, sans-serif; 
+    margin-right:0px !important; 
+    padding:0px;
+    text-align: left;
+    width: 245px !important; 
+}
+.logo-cm
+{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;   
+}
+
+.logo-container
+{
+    display: table;
+    float: left;
+    height: 80px;
+    margin: 0;
+    text-align: left;
+    width: 250px;
+}
+.iconUser 
+{ 
+    background-image:url(../img/LogIn-sprite.png) !important;
+    background-position: 22px 18px !important;
+    background-repeat: no-repeat !important;
+    margin-bottom:20px !important;
+    position: relative;
+    top:4px;
+    left: 4px;
+    float:left;
+	height: 40px;
+	width: 65px;
+    z-index:9999;
+}
+#UserName, #UserPass {
+	left:-65px;
+	z-index: 9;
+}
+#UserNameMessage, #UserPassMessage {
+	float:right;
+	position: relative;
+	top: -60px;
+	left:-10px;
+}
+#UserNameMessage.field-validation-error {
+	float:right;
+	position: relative;
+	top: -60px;
+	left:-10px;
+}
+.iconPassword {
+    background-image:url(../img/LogIn-sprite.png) !important;
+    background-position: 19px -89px;
+    background-repeat: no-repeat !important;
+    margin-bottom:20px !important;
+    position: relative;
+    top:5px;
+    left: 4px;
+    float:left;
+	height: 40px;
+	width: 65px;
+    z-index:9999;
+}
+#userNameContainer .field-validation-error,#userNameContainer .errorMessage, 
+#PasswordContainer .field-validation-error, #forgotPasswordContainer .field-validation-error{
+	left: -60px;
+	position: relative;
+}
+#forgotPasswordMessage {
+	position:relative;
+	left: 480px;
+    top: -50px;
+}
+#UserNameMessage {
+	top:-45px !important;
+}
+#forgotPasswordContainer {
+	height: 70px;
+	width: 900px;
+}
+#PasswordContainer {
+	height:106px;
+}
+#userNameContainer {
+	height: 90px;
+}
+
+
+#userNameContainer .field-validation-error, #userNameContainer .errorMessage, #PasswordContainer .field-validation-error, #forgotPasswordContainer .field-validation-error {
+    left: -60px;
+    position: relative;
+}
+#PhoneCountry.bigInput,#PhoneArea.bigInput{
+	width:93px;
+	margin-right: 3px;
+}
+#Phone.bigInput {
+	width:182px;
+}
+.checkboxContainer {
+	display: inline-block;
+    height: 64px;
+    margin-top: 16px;
+	width:400px;
+}
+.blueCheck {
+	display: inline-block;
+	height:16px;
+	width:16px;
+	background-image:url(../img/register-sprite.png);
+    background-repeat: no-repeat;
+}
+.blueCheck.checked {
+	background-position: -122px -47px;
+}
+.blueCheck.unchecked {
+	background-position: -104px -47px;
+}
+.checkboxContainer .checkText {
+	float:right;
+    width: 380px;
+}
+#passwordContainer {
+	display: inline-block;
+	width:380px;
+	height:40px;
+}
+#password.bigInput {
+	border-radius: 70px 0 0 70px;
+	padding-right: 34px;
+	width:271px;
+}
+#ShowHidePass-Container {
+    background-color: #E8E8E8;
+    border-radius: 0 70px 70px 0;
+    float: right;
+    height: 40px;
+	padding-left: 10px;
+    width: 100px;
+	line-height: 40px;
+	position: relative;
+    top: -50px;
+}
+span.showPassText {
+	margin-left:5px;
+}
+#showPass-check {
+	position: relative;
+    top: 2px;
+    z-index: 22;
+}
+.recaptcha_reload {
+    margin-top:10px;
+}
+.recaptcha_reload, .recaptcha_only_if_image,recaptcha_help {
+	margin-bottom:1px;
+}
+
+#recaptcha_widget {
+	border: 4px solid #E8E8E8;
+    border-radius: 70px;
+    padding-top: 10px;
+    height: 75px;
+    width: 452px;
+}
+#PhoneMessage
+{
+    color: #6A654B;
+    display: inline;
+    font-family: 'UbuntuLightItalic',Sans-Serif;
+    padding-left: 10px;
+    vertical-align: middle;
+    width: 465px;
+}
